@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Product, formatPrice } from "@/lib/data";
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -10,35 +11,48 @@ export default function ProductCard({ product }: { product: Product }) {
         cursor: "pointer",
       }}
     >
-      {/* Product image placeholder */}
+      {/* Product image */}
       <div
         style={{
           width: "100%",
           aspectRatio: "1",
           background: "#f0ebe4",
           borderRadius: 4,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
           overflow: "hidden",
           transition: "transform .3s",
+          position: "relative",
         }}
         onMouseEnter={(e) =>
           (e.currentTarget.style.transform = "scale(1.02)")
         }
         onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
       >
-        <span
-          style={{
-            color: "#a08060",
-            fontSize: 13,
-            textAlign: "center",
-            padding: 16,
-            fontStyle: "italic",
-          }}
-        >
-          {product.name}
-        </span>
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 768px) 50vw, 220px"
+          />
+        ) : (
+          <span
+            style={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#a08060",
+              fontSize: 13,
+              textAlign: "center",
+              padding: 16,
+              fontStyle: "italic",
+            }}
+          >
+            {product.name}
+          </span>
+        )}
       </div>
 
       {/* Name */}

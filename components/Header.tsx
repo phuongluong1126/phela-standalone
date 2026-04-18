@@ -39,8 +39,8 @@ export default function Header() {
           <Image
             src="https://phela.vn/wp-content/uploads/2025/06/cropped-0-02-06-04d15c014b6c8bbe49941692f60a957bf65d7f7b1b37169564819407b23d60e9_ec49f8f5866ec0b.png"
             alt="Phê La"
-            width={120}
-            height={40}
+            width={52}
+            height={52}
             style={{ objectFit: "contain", filter: "brightness(0) invert(1)" }}
             priority
           />
