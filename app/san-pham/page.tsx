@@ -50,11 +50,16 @@ function ProductCard({ product }: { product: Product }) {
             alignItems: "center", justifyContent: "center", fontSize: 36,
           }}>🧋</div>
         )}
-        <div style={{ position: "absolute", top: 8, left: 8, display: "flex", gap: 4, flexWrap: "wrap" }}>
-          {product.hot     && <span className="tag-hot">🔥 Hot</span>}
-          {product.holiday && <span className="tag-vn">🇻🇳 Dịp lễ</span>}
-          {product.summer  && <span style={{ fontSize: 10, fontWeight: 700, padding: "3px 8px", borderRadius: 4, background: "rgba(0,168,150,.15)", color: "var(--summer-teal)" }}>☀️ Hè</span>}
-        </div>
+        {(product.hot || product.holiday || product.summer) && (
+          <div style={{ position: "absolute", top: 8, left: 8 }}>
+            {product.hot
+              ? <span className="badge badge-red"    style={{ fontSize: 9, backdropFilter: "blur(6px)" }}>🔥 Hot</span>
+              : product.holiday
+              ? <span className="badge badge-yellow" style={{ fontSize: 9, backdropFilter: "blur(6px)" }}>🇻🇳 Dịp lễ</span>
+              : <span className="badge badge-teal"   style={{ fontSize: 9, backdropFilter: "blur(6px)", background: "rgba(0,168,150,.85)" }}>☀️ Mùa hè</span>
+            }
+          </div>
+        )}
       </div>
       <div style={{ padding: "13px 15px 17px", flex: 1, display: "flex", flexDirection: "column", gap: 4 }}>
         <h3 style={{ fontSize: 13, fontWeight: 700, margin: 0, lineHeight: 1.4 }}>{product.name}</h3>
