@@ -33,25 +33,19 @@ export default function LoadingSplash() {
         pointerEvents: fadeOut ? "none" : "auto",
       }}
     >
-      <h1
-        style={{
-          color: "#C8A96E",
-          fontSize: "clamp(36px, 6vw, 56px)",
-          fontWeight: 300,
-          letterSpacing: 10,
-          margin: 0,
-          fontFamily: "serif",
-        }}
-      >
-        PHÊ LA
-      </h1>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="https://phela.vn/wp-content/uploads/2025/06/cropped-0-02-06-04d15c014b6c8bbe49941692f60a957bf65d7f7b1b37169564819407b23d60e9_ec49f8f5866ec0b.png"
+        alt="Phê La"
+        style={{ width: 160, objectFit: "contain", filter: "brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(5deg)", marginBottom: 16 }}
+      />
 
       <p
         style={{
           color: "rgba(200, 169, 110, 0.8)",
           fontSize: "clamp(11px, 1.5vw, 14px)",
           letterSpacing: 5,
-          marginTop: 12,
+          marginTop: 0,
           fontFamily: "serif",
         }}
       >

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
@@ -34,17 +35,15 @@ export default function Header() {
         }}
       >
         {/* Logo */}
-        <Link
-          href="/"
-          style={{
-            color: "#fff",
-            fontSize: 22,
-            fontWeight: 700,
-            letterSpacing: 3,
-            textTransform: "uppercase",
-          }}
-        >
-          PHÊ LA
+        <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+          <Image
+            src="https://phela.vn/wp-content/uploads/2025/06/cropped-0-02-06-04d15c014b6c8bbe49941692f60a957bf65d7f7b1b37169564819407b23d60e9_ec49f8f5866ec0b.png"
+            alt="Phê La"
+            width={120}
+            height={40}
+            style={{ objectFit: "contain", filter: "brightness(0) invert(1)" }}
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
