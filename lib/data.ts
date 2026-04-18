@@ -223,7 +223,7 @@ export const newsArticles: Article[] = [
     title: "30/4 – Mừng Ngày Giải Phóng Cùng Phê La 🇻🇳",
     excerpt: "Tự do có mùi vị của một ly trà Ô Long đá mát lạnh dưới nắng hè. Phê La mời bạn cùng chúng tôi kỷ niệm 50 năm ngày thống nhất đất nước theo cách thật đặc biệt.",
     date: "2026-04-19",
-    category: "Chiến Dịch 30/4",
+    category: "Chiến Dịch",
     image: "https://phela.vn/wp-content/uploads/2025/05/Bong-Buoi-scaled.jpg",
     featured: true,
   },

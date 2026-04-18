@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useRef, ReactNode } from "react";
+import React, { useEffect, useRef, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
   className?: string;
   delay?: number;
   direction?: "up" | "left" | "right" | "scale";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }
 
 export default function ScrollReveal({
