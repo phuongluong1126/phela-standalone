@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LoadingSplash from "@/components/LoadingSplash";
 
 export const metadata: Metadata = {
   title: "Phê La - Nốt Hương Đặc Sản",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body>
+        <LoadingSplash />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
